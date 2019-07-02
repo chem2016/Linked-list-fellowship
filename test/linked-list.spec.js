@@ -99,7 +99,7 @@ describe('A linked list', () => {
     expect(linkedList.removeHead()).toBe('third')
   })
 
-  xit('should make sure the previous of any newly appointed HEAD is null', () => {
+  it('should make sure the previous of any newly appointed HEAD is null', () => {
     linkedList.addToTail('first')
     linkedList.addToTail('second')
     linkedList.addToTail('third')
@@ -107,7 +107,7 @@ describe('A linked list', () => {
     expect(linkedList.head.previous).toBe(null)
   })
 
-  xit('should make sure the next of any newly appointed TAIL is null', () => {
+  it('should make sure the next of any newly appointed TAIL is null', () => {
     linkedList.addToTail('first')
     linkedList.addToTail('second')
     linkedList.addToTail('third')
@@ -115,7 +115,7 @@ describe('A linked list', () => {
     expect(linkedList.tail.next).toBe(null)
   })
 
-  xit('should be able to add to head or tail', () => {
+  it('should be able to add to head or tail', () => {
     linkedList.addToTail('second')
     linkedList.addToHead('first')
     linkedList.addToTail('third')
@@ -124,7 +124,7 @@ describe('A linked list', () => {
     expect(linkedList.removeHead()).toBe('third')
   })
 
-  xit('should return the tail on a removeTail', () => {
+  it('should return the tail on a removeTail', () => {
     linkedList.addToTail('second')
     linkedList.addToHead('third')
     linkedList.addToTail('first')
@@ -133,7 +133,7 @@ describe('A linked list', () => {
     expect(linkedList.removeTail()).toBe('third')
   })
 
-  xit('should remove head and tail when last node is removed', () => {
+  it('should remove head and tail when last node is removed', () => {
     expect(linkedList.removeHead()).toBeFalsy()
     linkedList.addToTail('one')
     expect(linkedList.removeHead()).toBe('one')
@@ -142,7 +142,7 @@ describe('A linked list', () => {
     expect(linkedList.tail).toBeFalsy()
   })
 
-  xit('should return the correct values for search', () => {
+  it('should return the correct values for search', () => {
     linkedList.addToTail('one')
     linkedList.addToTail('two')
     linkedList.addToTail('three')
@@ -154,7 +154,7 @@ describe('A linked list', () => {
     expect(linkedList.search('four')).toBe('four')
   })
 
-  xit('should be able to take strings and functions both as search inputs', () => {
+  it('should be able to take strings and functions both as search inputs', () => {
     linkedList.addToTail('one')
     linkedList.addToTail('two')
     const foundNode = linkedList.search((nodeValue) => {
@@ -165,7 +165,7 @@ describe('A linked list', () => {
 
   // This spec demonstrates the utility of the previous spec.
   // If you are passing the last one correctly, this one should already pass!
-  xit('should therefore be able to store and search for objects, not just strings', () => {
+  it('should therefore be able to store and search for objects, not just strings', () => {
     function UserNode (name, email, city) {
       this.name = name
       this.email = email
